@@ -1,0 +1,31 @@
+/*
+ Global style
+=================================================================*/
+body {
+    background-color:  #141414;
+}
+
+.card {
+    width: 100px;
+}
+label.font-perso, option {
+    font-size: 10px;
+}
+
+.row.align-items-center.justify-content-center {
+    height: 80vh;
+}
+
+h1 {
+    border-bottom: 1px solid white;
+}
+
+#inlineFormInputName, #inlineFormCustomSelect {
+    background-color: transparent;
+}
+
+.btn-outline-secondary:hover {
+    color: black;
+    background-color: white;
+    border-color: #6c757d;
+}
