@@ -1,5 +1,5 @@
 /*
- Global style
+ Custum style
 =================================================================*/
 body {
     background-color:  #141414;
@@ -13,7 +13,7 @@ label.font-perso, option {
 }
 
 .row.align-items-center.justify-content-center {
-    height: 80vh;
+    height: 100vh;
 }
 
 h1 {
@@ -29,3 +29,47 @@ h1 {
     background-color: white;
     border-color: #6c757d;
 }
+
+.custom-control-lg .custom-control-label::before,
+.custom-control-lg .custom-control-label::after {
+    top: 0.1rem !important;
+    left: -1rem !important;
+    width: 1.75rem !important;
+    height: 1.75rem !important;
+}
+
+option {
+    color: white;
+    background-color: #141414;
+  }
+
+  .custom-control-label::after {
+    
+    background: #141414;
+    opacity: 0.9;
+    margin: 1px solid black;
+}
+
+.custum-icon {
+    color: white;
+    background: black;
+}
+
+
+.card-img-overlay {
+    position: absolute;
+    top: 46px;
+    right: 0px;
+    bottom: 0;
+    left: -12px;
+    padding: 1.25rem;
+}
+
+.card-img-overlay {
+    display: none;
+}
+
+.card-img:hover + .card-img-overlay {
+    display: block;
+}
+
