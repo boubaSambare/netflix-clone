@@ -83,16 +83,20 @@ const getAllMovies = async () => {
 const productsListTemplate = function (movie) {
     return `
     <tr>
-        <th scope="row">${movie._id}</th>
-        <td>${movie.name}</td>
-        <td>${movie.description}</td>
-        <td>${movie.category}</td>
-        <td> <img src="${movie.imageUrl}" width="40" style="height: auto;" alt=""></td>
-        <td><a type="button" class="btn btn-warning" href="back-office.html?id=${movie._id}/" onclick="renderUpdateForm()">Edit</a></td>
+        <th scope="row" id="update-id">${movie._id}</th>
+        <td id="update-name">${movie.name}</td>
+        <td id="update-desc">${movie.description}</td>
+        <td id="update-category">${movie.category}</td>
+        <td> <img src="${movie.imageUrl}" width="40" style="height: auto;" alt="" id="update-img"></td>
+        <td><a type="button" class="btn btn-warning" href="back-office.html?id=${movie._id}/" onclick="renderUpdateForm(event)">Edit</a></td>
         <td><a type="button" class="btn btn-danger"  href="#" onclick="deleteMovie('${movie._id}')">Delete</a></td>
     </tr>
     `
 }
+
+/**
+ * pre form to update movies
+ */
 
 const editTemplate = function () {
     return `
@@ -115,6 +119,7 @@ const editTemplate = function () {
                     <label for="formGroupExampleInput2">Image</label>
                     <input type="url" class="form-control" id="movies-image" placeholder="Another input" required>
                 </div>
+                <input type="hidden" id="movies-id" name="custId" value="">
 
                 <button type="submit" class="btn btn-primary">Update</button>
         </div>
@@ -122,12 +127,58 @@ const editTemplate = function () {
     `
 }
 
-const renderUpdateForm = function () {
+const renderUpdateForm = async function (event) {
     event.preventDefault()
+    const table = event.currentTarget.parentNode.parentNode
     const formElement = _$('.form-wrapper')
     formElement.innerHTML = ''
-
     formElement.innerHTML = editTemplate()
+
+    let name = _$('#movies-name')
+    let description = _$('#movies-desc')
+    let category = _$('#movies-category')
+    let imageUrl = _$('#movies-image')
+    let movieId = _$('#movies-id')
+
+
+    name.value = table.querySelector('#update-name').textContent
+    description.value = table.querySelector('#update-desc').textContent
+    category.value = table.querySelector('#update-category').textContent
+    imageUrl.value = table.querySelector('#update-img').src
+    movieId.value = table.querySelector('#update-id').textContent
+    
+
+
+    await renderAdmin()
+}
+
+const updateMovies = async () => {
+    event.preventDefault()
+    const movies = {
+        name: _$('#movies-name').value,
+        description: _$('#movies-desc').value,
+        category: _$('#movies-category').value,
+        imageUrl: _$('#movies-image').value,
+    }
+    console.log(movies)
+    // id movie in hidden input
+    let movieId = _$('#movies-id').value
+
+    const postInit = {
+        method: 'PUT',
+        headers: {
+            'content-type': 'application/json',
+            'Authorization': `Basic ${autorization}`,
+        },
+
+        body: JSON.stringify(movies)
+    }
+
+    let request = await fetch(url + movieId, postInit)
+
+    let reponse = await request.json()
+    if (request.status === 200) alert('saved')
+    await renderAdmin()
 }
 
 
