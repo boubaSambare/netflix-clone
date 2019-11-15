@@ -35,7 +35,10 @@ const addMovies = async () => {
     if (request.status === 200) alert('saved')
     await renderAdmin()
 }
-
+/**
+ * 
+ * @param {string} id 
+ */
 const deleteMovie = async function (id) {
     event.stopPropagation()
     event.preventDefault()
@@ -88,7 +91,7 @@ const productsListTemplate = function (movie) {
         <td id="update-desc">${movie.description}</td>
         <td id="update-category">${movie.category}</td>
         <td> <img src="${movie.imageUrl}" width="40" style="height: auto;" alt="" id="update-img"></td>
-        <td><a type="button" class="btn btn-warning" href="back-office.html?id=${movie._id}/" onclick="renderUpdateForm(event)">Edit</a></td>
+        <td><a type="button" class="btn btn-warning" href="#" onclick="renderUpdateForm(event)">Edit</a></td>
         <td><a type="button" class="btn btn-danger"  href="#" onclick="deleteMovie('${movie._id}')">Delete</a></td>
     </tr>
     `
@@ -127,6 +130,10 @@ const editTemplate = function () {
     `
 }
 
+/**
+ * function to render value in the  update form
+ * @param {Event} event 
+ */
 const renderUpdateForm = async function (event) {
     event.preventDefault()
     const table = event.currentTarget.parentNode.parentNode
@@ -151,7 +158,9 @@ const renderUpdateForm = async function (event) {
 
     await renderAdmin()
 }
-
+/**
+ * function to update movies
+ */
 const updateMovies = async () => {
     event.preventDefault()
     const movies = {
