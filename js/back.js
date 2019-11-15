@@ -8,6 +8,20 @@ const getInit = {
 
 const _$ = (element) => document.querySelector(element)
 
+const cleanForm = () => {
+    let name = _$('#movies-name')
+    let description = _$('#movies-desc')
+    let category = _$('#movies-category')
+    let imageUrl = _$('#movies-image')
+
+    name.value = ''
+    description.value = ''
+    category.value = ''
+    imageUrl.value = ''
+    
+    
+}
+
 const addMovies = async () => {
     event.preventDefault()
     const movies = {
@@ -32,7 +46,8 @@ const addMovies = async () => {
     let request = await fetch(url, postInit)
 
     let reponse = await request.json()
-    if (request.status === 200) alert('saved')
+    if (reponse.ok) cleanForm()
+    cleanForm()
     await renderAdmin()
 }
 /**
@@ -186,7 +201,7 @@ const updateMovies = async () => {
     let request = await fetch(url + movieId, postInit)
 
     let reponse = await request.json()
-    if (request.status === 200) alert('saved')
+    cleanForm()
     await renderAdmin()
 }
 
