@@ -1,109 +1,127 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>Profile</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-    <link rel="stylesheet" href="css/profile.css">
-  </head>
-  <body>
-      <nav class="navbar navbar-light">
-          <a class="navbar-brand" href="#">
-            <img src="images/logo.png" width="60" height="30" alt="">
-          </a>
-      </nav>
-      <div class="container"> <!-- Container-->
-      <div class=" row align-items-center justify-content-center">
+<head>
+  <title>Profile</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/profile.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-light">
+    <a class="navbar-brand" href="#">
+      <img src="images/logo.png" width="60" height="30" alt="">
+    </a>
+  </nav>
+  <div class="container">
+    <!-- Container-->
+    <div class=" row align-items-center justify-content-center">
 
       <!--Grid column-->
       <div class="col-md-6">
-              <h1 class="text-center text-white mb-3">Edit Profile</h1>
-              <div class="row mt-4 border-bottom border-white "><!--Row avatar form-->
-                  <div class="col-md-3 col-sm-4 col-xs-4">
-                        <div class="card rounded-0">
-                              <img class="card-img img-fluid" src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/bf6e4a33850498.56ba69ac3064f.png"  width="60" height="100" alt="Card image">
-                              <div class="card-img-overlay">
-                                  <i class="material-icons custum-icon border border-dark rounded-circle">
-                                  edit
-                                  </i>                     
-                              </div>
-                          </div>
-                  </div> <!--End col avatar-->
-                  <div class="col-md-9 col-xs-8"> <!--col form-->
-                        
-                            <form class="mb-4">
-                                    <div class="form-row align-items-center  ">
-                                      <div class="col-sm-7 my-1">
-                                        <label class="sr-only" for="inlineFormInputName"></label>
-                                        <input type="text" class="form-control rounded-0 text-white" id="inlineFormInputName" >
-                                      </div>
-                                      
-                                      <div class="col-sm-5 my-1">
-                                        <div class="custom-control-lg custom-control custom-checkbox">
-                                          <input class="custom-control-input" id="checkbox-large" type="checkbox"/>
-                                          <label class="custom-control-label  text-white pl-4 " for="checkbox-large">
-                                              Kid?
-                                          </label>
-                                      </div>
-                                      </div>
-                                      
-                                    </div>
-                                    <div class="form-row align-items-center ">
-                                        <div class="col-4 my-1">
-                                            <label class="mr-sm-2 text-white font-perso" for="inlineFormCustomSelect">Language</label>
-                                            <select class="custom-select mr-sm-2 rounded-0 text-white" id="inlineFormCustomSelect">
-                                                <option selected>French</option>
-                                                <option value="1">italian</option>
-                                                <option value="2">danish</option>
-                                                <option value="3">Three</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-row align-items-center ">
-                                            <div class="col-6 my-1">
-                                                <label class="mr-sm-2 text-white font-perso" for="inlineFormCustomSelect ">Allowed Tv show and movies</label>
-                                                <select class="custom-select mr-sm-2 rounded-0 text-white" id="inlineFormCustomSelect">
-                                                    <option selected>All Maturity levels</option>
-                                                    <option value="1">for little kids only</option>
-                                                    <option value="2">dusch</option>
-                                                    <option value="3">Three</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                  </form>
-                        
-                      </div> <!--End col form-->
-                  
-              </div> <!-- end avatar and form-->
-              
-                <div class="row mt-5 d-flex"> <!-- Row button-->
-                  <div class="col-md-3">
-                    <button type="button" class="btn btn-outline-secondary btn-block rounded-0">Save</button>
-                  </div>
-                  <div class="col-md-4">
-                    <button type="button" class="btn btn-outline-secondary btn-block rounded-0">Cancel</button>
-                  </div>
-                  <div class="col-md-5">
-                    <button type="button" class="btn btn-outline-secondary btn-block rounded-0">Delete profile</button>
-                  </div>
+        <h1 class="text-center text-white mb-3">Edit Profile</h1>
+        <div class="row mt-4 border-bottom border-white ">
+          <!--Row avatar form-->
+          <div class="col-md-3 col-sm-4 col-xs-4">
+            <div class="card rounded-0">
+              <img class="card-img img-fluid"
+                src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/bf6e4a33850498.56ba69ac3064f.png" width="60"
+                height="100" alt="Card image">
+              <div class="card-img-overlay">
+                <i class="material-icons custum-icon border border-dark rounded-circle">
+                  edit
+                </i>
+              </div>
+            </div>
+          </div>
+          <!--End col avatar-->
+          <div class="col-md-9 col-xs-8">
+            <!--col form-->
 
-                </div> <!-- end Row button-->
+            <form class="mb-4">
+              <div class="form-row align-items-center  ">
+                <div class="col-sm-7 my-1">
+                  <label class="sr-only" for="inlineFormInputName"></label>
+                  <input type="text" class="form-control rounded-0 text-white" id="inlineFormInputName">
+                </div>
+
+                <div class="col-sm-5 my-1">
+                  <div class="custom-control-lg custom-control custom-checkbox">
+                    <input class="custom-control-input" id="checkbox-large" type="checkbox" />
+                    <label class="custom-control-label  text-white pl-4 " for="checkbox-large">
+                      Kid?
+                    </label>
+                  </div>
+                </div>
+
+              </div>
+              <div class="form-row align-items-center ">
+                <div class="col-4 my-1">
+                  <label class="mr-sm-2 text-white font-perso" for="inlineFormCustomSelect">Language</label>
+                  <select class="custom-select mr-sm-2 rounded-0 text-white" id="inlineFormCustomSelect">
+                    <option selected>French</option>
+                    <option value="1">italian</option>
+                    <option value="2">danish</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row align-items-center ">
+                <div class="col-6 my-1">
+                  <label class="mr-sm-2 text-white font-perso" for="inlineFormCustomSelect ">Allowed Tv show and
+                    movies</label>
+                  <select class="custom-select mr-sm-2 rounded-0 text-white" id="inlineFormCustomSelect">
+                    <option selected>All Maturity levels</option>
+                    <option value="1">for little kids only</option>
+                    <option value="2">dusch</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+
+          </div>
+          <!--End col form-->
+
+        </div> <!-- end avatar and form-->
+
+        <div class="row mt-5 d-flex">
+          <!-- Row button-->
+          <div class="col-md-3">
+            <button type="button" class="btn btn-outline-secondary btn-block rounded-0">Save</button>
+          </div>
+          <div class="col-md-4">
+            <button type="button" class="btn btn-outline-secondary btn-block rounded-0">Cancel</button>
+          </div>
+          <div class="col-md-5">
+            <button type="button" class="btn btn-outline-secondary btn-block rounded-0">Delete profile</button>
+          </div>
+
+        </div> <!-- end Row button-->
       </div>
-      </div>
-    <!--Grid row-->   
-      </div> <!-- End container-->
-       
-    <!-- Optional JavaScript -->
-    <script src="js/profile.js"></script>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+    </div>
+    <!--Grid row-->
+  </div> <!-- End container-->
+
+  <!-- Optional JavaScript -->
+  <script src="js/profile.js"></script>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>

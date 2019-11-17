@@ -83,7 +83,7 @@ const getCategory = async () => {
 const getAllMovies = async () => {
     let movies = []
     let categories = await getCategory()
-    for (category of categories) {
+    for (let category of categories) {
         let reponse = await fetch(url + category, getInit)
         let moviesByCategory = await reponse.json()
         movies.push(...moviesByCategory)
