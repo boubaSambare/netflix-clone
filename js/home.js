@@ -61,7 +61,7 @@ window.onload = async () => {
         //row target for truffy test
         let movieRow = _$('.'+movie.category)
        if(movieRow) {
-           filteredMovies = allMovies.filter(element => element.category === movie.category)
+          let filteredMovies = allMovies.filter(element => element.category === movie.category)
            movieRow.innerHTML = filteredMovies.map(element => movieTemplete(element)).join('')
        }
 }
