@@ -39,12 +39,13 @@ const row = (category) => {
 }
 
 const movieTemplete = (movie) => {
+    const {imageUrl, name, description} = movie
     return `
     <div class="card  text-white col-md-4">
-    <img src="${movie.imageUrl}" class="card-img" alt="...">
+    <img src="${imageUrl}" class="card-img" alt="...">
     <div class="card-img-overlay">
-      <h5 class="card-title">${movie.name}</h5>
-      <p class="card-text">${movie.description}</p>
+      <h5 class="card-title">${name}</h5>
+      <p class="card-text">${description}</p>
     </div>
   </div>
     `

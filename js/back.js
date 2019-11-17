@@ -99,15 +99,16 @@ const getAllMovies = async () => {
  */
 
 const productsListTemplate = function (movie) {
+    const {imageUrl, name, description, _id, category} = movie
     return `
     <tr>
-        <th scope="row" id="update-id">${movie._id}</th>
-        <td id="update-name">${movie.name}</td>
-        <td id="update-desc">${movie.description}</td>
-        <td id="update-category">${movie.category}</td>
-        <td> <img src="${movie.imageUrl}" width="40" style="height: auto;" alt="" id="update-img"></td>
+        <th scope="row" id="update-id">${_id}</th>
+        <td id="update-name">${name}</td>
+        <td id="update-desc">${description}</td>
+        <td id="update-category">${category}</td>
+        <td> <img src="${imageUrl}" width="40" style="height: auto;" alt="" id="update-img"></td>
         <td><a type="button" class="btn btn-warning" href="#" onclick="renderUpdateForm(event)">Edit</a></td>
-        <td><a type="button" class="btn btn-danger"  href="#" onclick="deleteMovie('${movie._id}')">Delete</a></td>
+        <td><a type="button" class="btn btn-danger"  href="#" onclick="deleteMovie('${_id}')">Delete</a></td>
     </tr>
     `
 }
